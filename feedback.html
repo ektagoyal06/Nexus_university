@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -51px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        .content {
+            margin: 23px 5px -20px 0px;
+            font-size: 27px;
+        }
+
+        p {
+            font-size: 34px;
+        }
+
+        .rate-box {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 0.1rem;
+            margin-right: 600px;
+        }
+
+        .rate-box input {
+            display: none;
+        }
+
+        .rate-box input:hover~.star:before {
+            color: rgba(255, 204, 51, 0.5);
+        }
+
+        .rate-box input:active+.star:before {
+            transform: scale(0.9);
+        }
+
+        .rate-box input:checked~.star:before {
+            color: #ffcc33;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .rate-box .star:before {
+            content: "★";
+            display: block;
+            font-family: "Potta One", cursive;
+            font-size: 50px;
+            cursor: pointer;
+            color: #0000;
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+            background-color: #aaa;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: all 0.3s;
+        }
+
+        /* .star {
+            display: block;
+            margin: 45px 5px 5px 0px;
+        } */
+
+        textarea {
+            border: none;
+            resize: none;
+            width: 100%;
+            padding: 0.2rem;
+            color: inherit;
+            font-family: inherit;
+            line-height: 1.5;
+            border-radius: 0.2rem;
+            box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.3), inset -2px -2px 8px rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        textarea::placeholder {
+            color: #aaa;
+        }
+
+        textarea:focus {
+            outline-color: green;
+        }
+
+        .text {
+            width: 450px;
+            margin-left: 500px;
+            font-size: 20px;
+        }
+
+        .sub {
+            margin: 23px 5px 5px 680px;
+            font-size: 25px;
+            padding: 7px 10px 7px 10px;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .sub:hover {
+            background-color: green;
+            color: white;
+        }
+
+        a1:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #search {
+            margin: 0px 15px 15px 400px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .marquee {
+            color: black;
+            text-decoration: none;
+        }
+
+        .marquee:hover {
+            color: red;
+
+        }
+
+        .links {
+            color: black;
+            text-decoration: none;
+        }
+
+        .links:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="head" style="width: 300px;">
+        <div id="header" style="width:200px">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="head1" style="width:1500px">
+        <div id="header1">
+            <div id="form">
+                <form>
+                    <label for="search"></label>
+                    <div class="Search1">
+                        <input type="text" name="mySearch" id="search" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="apply">
+                <button class="btn">Apply now</button>
+                <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+            </div>
+        </div>
+    </section>
+    <nav id="navBar">
+        <ul>
+            <li class="item"><a href="home.html" target="_blank">Home </a></li>
+            <li class="item"><a href="aboutus.html" target="_blank">About </a></li>
+            <li class="item"><a href="courses front page.html" target="_blank">Course</a></li>
+            <li class="item"><a href="admission front page.html" target="_blank">Admission</a></li>
+            <li class="item"><a href="campus.html" target="_blank">Campus</a></li>
+            <li class="item"><a href="placement.html" target="_blank">Placement</a></li>
+            <li class="item"><a href="alumni.html" target="_blank">Alumini</a></li>
+            <li class="item"><a href="stuportal.html" target="_blank">Studentportal</a></li>
+            <li class="item"><a href="feedback.html" target="_blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <marquee direction="forwards">
+        <a href="admission front page.html" style="font-size: 25px;font-weight: bold;" class="marquee">Admission
+            open</a>
+    </marquee>
+    <br><br><br>
+    <div id="feedback">
+        <div class="heading" align="center" style="font-weight: bold; font-size: 40px;">Rate your experience</div>
+        <div class="content" align="center" style="font-weight: bold;">We highly value your feedback! Kindly take a
+            moment to rate your experience and provide us with your valuable feedback.
+        </div><br><br>
+        <section>
+            <div class="rate-box">
+                <input type="radio" name="star" id="star0" class="star" />
+                <label class="star" for="star0"></label>
+                <input type="radio" name="star" id="star1" class="star" />
+                <label class="star" for="star1"></label>
+                <input type="radio" name="star" id="star2" checked="checked" class="star" />
+                <label class="star" for="star2"></label>
+                <input type="radio" name="star" id="star3" class="star" />
+                <label class="star" for="star3"></label>
+                <input type="radio" name="star" id="star4" class="star" />
+                <label class="star" for="star4"></label>
+                <p>Infrastructure?</p>
+            </div>
+            <textarea class="text" cols="30" rows="6" placeholder="Tell us about your experience!"></textarea>
+        </section>
+        <section>
+            <div class="rate-box">
+                <label class="star" for="star5"></label>
+                <input type="radio" name="star" id="star6" class="star" />
+                <label class="star" for="star6"></label>
+                <input type="radio" name="star" id="star7" checked="checked" class="star" />
+                <label class="star" for="star7"></label>
+                <input type="radio" name="star" id="star8" class="star" />
+                <label class="star" for="star8"></label>
+                <input type="radio" name="star" id="star9" class="star" />
+                <label class="star" for="star9"></label>
+                <p>Courses?</p>
+            </div>
+            <textarea class="text" cols="30" rows="6" placeholder="Tell us about your experience!"></textarea>
+    </div>
+    </section>
+    <section>
+        <div class="rate-box">
+            <input type="radio" name="star" id="star10" class="star" />
+            <label class="star" for="star10"></label>
+            <input type="radio" name="star" id="star11" class="star" />
+            <label class="star" for="star11"></label>
+            <input type="radio" name="star" id="star12" checked="checked" class="star" />
+            <label class="star" for="star12"></label>
+            <input type="radio" name="star" id="star13" class="star" />
+            <label class="star" for="star13"></label>
+            <input type="radio" name="star" id="star14" class="star" />
+            <label class="star" for="star14"></label>
+            <p>Faculties?</p>
+        </div>
+        <textarea class="text" cols="30" rows="6" placeholder="Tell us about your experience!"></textarea>
+        <button class="sub">Submit</button>
+    </section>
+    </div>
+    <footer style="background-color: rgb(228, 221, 221);height: 650px;">
+        <section id="foot" style=" margin: 100px 30px -544px 150px;">
+            <div id="foot1" style="width:255px; font-size: 15px; padding-top: 95px;">
+                <p><strong>QUICK LINKS</strong></p><br>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p><br>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p><br>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p><br>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p><br>
+                <p>
+                    <a href="courses front page.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: 180px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:15px;">
+                <p><strong>GET IN TOUCH</strong></p><br>
+                <p>NEXUS campus</p><br>
+                <p>Sector-79,Madrid Hills</p><br>
+                <p>Old GT Road,Mumbai-121374,India</p><br>
+                <p><strong>General Enquiry:</strong></p><br>
+                <p>NU:+91-7827363231</p><br>
+                <p>Fax:+91-149-4198233</p><br>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -510px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 15px;">
+                <p><strong>City offices</strong></p><br>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p><br>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

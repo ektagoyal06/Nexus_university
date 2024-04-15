@@ -1,0 +1,944 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni</title>
+    <link rel="stylesheet" href="WEBSITE.CSS">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -51px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        #main {
+            border: 2px solid whitesmoke;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        #content {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+
+        #T1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font: bold;
+        }
+
+        #stories {
+            font-family: "Libre Baskerville", serif;
+            font-size: 50px;
+        }
+
+        #imgage {
+            height: 250px;
+            width: 250px;
+            display: inline-block;
+        }
+
+        #new {
+            background: #151515;
+            color: white;
+            padding: 50px 50px 0 px;
+            font-size: 16px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: max-content;
+        }
+
+        .sub {
+            color: #E77500;
+            font-size: 48PX;
+            margin-bottom: 3rem;
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+            margin: 0px 0px 48px;
+        }
+
+        .link {
+            margin-right: 200px;
+            text-decoration: none;
+            color: black;
+        }
+
+        span {
+            color: white;
+            margin-bottom: 3rem;
+            text-align: center;
+            margin: 0px 0px 48px 10px;
+            padding: 0px 15px 16px 10px;
+
+        }
+
+        #picse {
+            height: 200px;
+            width: 100px;
+            display: inline-block;
+            margin: 60px 60px 60px 60px;
+            background-size: cover;
+            list-style-position: inside;
+        }
+
+        #picsi {
+            height: 200px;
+            width: 100px;
+            display: inline-block;
+            margin: 60px 60px 60px 60px;
+            background-size: cover;
+        }
+
+        #profile {
+            font-family: "Libre Baskerville", serif;
+            color: black;
+        }
+
+        #search {
+            margin: 19px 15px 15px -720px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .marquee {
+            color: black;
+            text-decoration: none;
+        }
+
+        .marquee:hover {
+            color: red;
+
+        }
+
+        .links {
+            color: black;
+            text-decoration: none;
+        }
+
+        .links:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section id="head" style="width: 300px;">
+        <div id="header" style="width:200px">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="head1" style="width:1500px">
+        <div id="header1">
+            <div class="apply">
+                <div id="form" style="height: 20px;">
+                    <form>
+                        <label for="search"></label>
+                        <div class="Search1">
+                            <input type="text" name="mySearch" id="search" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+                <button class="btn">Apply now</button>
+                <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+            </div>
+        </div>
+    </section>
+
+    <nav id="navBar">
+        <ul>
+            <li class="item"><a href="home.html">Home </a></li>
+            <li class="item"><a href="aboutus.html">About </a></li>
+            <li class="item"><a href="courses front page.html">Course</a></li>
+            <li class="item"><a href="admission front page.html">Admission</a></li>
+            <li class="item"><a href="campus.html">Campus</a></li>
+            <li class="item"><a href="placement.html">Placement</a></li>
+            <li class="item"><a href="alumni.html">Alumini</a></li>
+            <li class="item"><a href="stuportal.html">Studentportal</a></li>
+            <li class="item"><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <marquee direction="forwards">
+        <a href="admission front page.html" style="font-size: 25px;font-weight: bold;" class="marquee">Admission
+            open</a>
+    </marquee>
+
+    <h3 id="T1">Nexus's alumni — entrepreneurs,
+        researchers, policymakers, and above all, leaders — have helped to shape the world we know today.
+        From 3-D printing to bionic prostheses, many of the products and services that
+        define the modern world have sprung from the minds and hands of Nexus brilliant alumni community.</h3>
+    <P>Nexus's nearly 10,000 alumni represent one of the most talented, innovative, and networked communities
+        in India. Many volunteer, serve on boards, head up regional alumni clubs, and generously support
+        Nexus's students, faculty, and staff.
+        As individuals, their contributions are extraordinary. As a community, their impact is infinite.</P>
+    <img src="RC-banner-animated.gif" alt="ALUMNI"></img>
+    <h2 id="stories">Stories</h2>
+    <p font="30px">
+
+        <img src="download.jpeg" id="imgage" alt="Jane Smith">
+
+        1. Meet John Doe: 🎓🌟 After graduating from our university with a degree in business, John Doe
+        went on to become a successful entrepreneur. He founded a tech startup that revolutionized the
+        e-commerce industry and was recognized as one of Forbes' "30 Under 30." John remains an active
+        supporter of our university, mentoring aspiring entrepreneurs and funding scholarships for
+        future business leaders.
+    </p>
+
+    <br>
+    <hr><br>
+
+    <img src="images.jpeg" id="imgage" alt="Jane Smith">
+    <p font="30px"> 2. Introducing Jane Smith: 🎓🌟 Jane Smith, a proud alumna of our university's engineering
+        program,
+        has made remarkable contributions to the field of renewable energy. Her groundbreaking research
+        on solar panel efficiency earned her international recognition and a prestigious award from the
+        United Nations. Jane's passion for sustainability continues as she leads initiatives to promote
+        clean energy solutions worldwide.
+
+        These stories showcase the incredible achievements of our alumni and demonstrate the impact our
+        university has on shaping successful careers. Let's celebrate the accomplishments of our graduates and
+        inspire future generations!
+        <br><br>
+    </p>
+
+    <div id="facts">
+        <div id="new">
+            <h1>Facts & Figures</h1>
+            <div class="sub">98000+ <br><span>living alumini</span>
+                <br><br>
+                <div class="sub">26000+ <br><span>Annual attendence at Reunions</span>
+                    <br><br>
+                    <div class="sub">150+ <br><span>Regional alumni associations worldwide</span>
+                        <br><br>
+                        <div class="sub">20 <br><span>Alumni winners of the Nobel Prize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div id="alumni">
+        <h1 class="heading" style="margin: 2px; font-size: 45px;">Alumni Profiles</h1>
+        <div id="pro1" style="width:1000px">
+            <div class="box">
+                <h2>The Service Leader</h2>From Haryana to Nexus to Chicago, Harsh Ahlawat, Class of 2021, helps
+                others
+                break through barriers.
+            </div>
+            <div class="box">
+                <h2>The Mentor</h2>Trivesh, Class of 2016, heads nonprofit to help poor students living near the
+                border.
+            </div>
+            <div class="box">
+                <h2>The Organiser</h2>Abhay Chauhan, Class of 2017, is leading poetry workshops in Kenya.
+            </div>
+            <div class="box">
+                <h2>The Senator</h2>Bill Bradley, Class of 1965, excelled on the basketball court and in
+                politics and
+                government.
+            </div>
+        </div>
+    </div>
+    <footer style="background-color: rgb(228, 221, 221);height: 500px;">
+        <section id="foot" style=" margin: 200px 30px 68px 150px;">
+            <div id="foot1" style="width:200px; font-size: 23px; padding-top: 95px;">
+                <p><strong>QUICK LINKS</strong></p><br>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p><br>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p><br>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p><br>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p><br>
+                <p>
+                    <a href="course.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: -380px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:20px;">
+                <p><strong>GET IN TOUCH</strong></p><br>
+                <p>NEXUS campus</p><br>
+                <p>Sector-79,Madrid Hills</p><br>
+                <p>Old GT Road,Mumbai-121374,India</p><br>
+                <p><strong>General Enquiry:</strong></p><br>
+                <p>NU:+91-7827363231</p><br>
+                <p>Fax:+91-149-4198233</p><br>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -360px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 20px;">
+                <p><strong>City offices</strong></p><br>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p><br>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumini</title>
+    <!-- <link rel="stylesheet" href="WEBSITE.CSS"> -->
+
+    <style>
+        #main {
+            border: 2px solid whitesmoke;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        #content {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        #navbar {
+            background-color: white;
+        }
+
+        #T1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font: bold;
+        }
+
+        #stories {
+            font-family: "Libre Baskerville", serif;
+            font-size: 50px;
+        }
+
+        #imgage {
+            height: 350px;
+            width: 350px;
+            display: inline-block;
+            border: 12px solid rgb(144, 153, 162);
+            background-image: cover;
+
+        }
+
+        #inline {
+            display: inline-block;
+        }
+
+        .sub {
+            color: #E77500;
+            font-size: 48PX;
+            margin-bottom: 3rem;
+            text-align: center;
+
+            display: inline-block;
+            margin: 0px 0px 48px;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        .link {
+            margin-right: 200px;
+            text-decoration: none;
+            color: black;
+        }
+
+        span {
+            color: white;
+            margin-bottom: 3rem;
+            text-align: center;
+            margin: 0px 0px 48px 10px;
+            padding: 0px 15px 16px 10px;
+
+        }
+
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -24px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        #picse {
+            height: 250px;
+            width: 250px;
+            display: inline-block;
+            margin: 60px 60px 60px 120px;
+            background-size: cover;
+
+        }
+
+        #profile {
+            font-family: "Libre Baskerville", serif;
+            color: black;
+        }
+
+        #colorbox {
+            background-color: rgba(54, 233, 54, 0.3);
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 30px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #colorboxx {
+            background-color: rgba(119, 165, 169, 0.3);
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 30px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .profiles {
+            border: 3px solid black;
+            border: 12px solid rgb(177, 198, 203);
+        }
+
+        #new {
+            background: #151515;
+            color: white;
+            padding: 50px 50px 0 px;
+            font-size: 22px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: max-content;
+        }
+        .links:hover {
+            color: red;
+        }
+
+        #search {
+            margin: 0px 15px 15px 400px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+        .marquee {
+            color: black;
+            text-decoration: none;
+        }
+
+        .marquee:hover {
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="content">
+            <section id="head" style="width: 300px;">
+                <div id="header" style="width:200px">
+                    <div class="logo">
+                        <img src="img/logo.png">
+                    </div>
+                </div>
+            </section>
+            <section id="head1" style="width:1500px">
+                <div id="header1">
+                    <div id="form">
+                        <form>
+                            <label for="search"></label>
+                            <div class="Search1">
+                                <input type="text" name="mySearch" id="search" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="apply">
+                        <button class="btn">Apply now</button>
+                        <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                        <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+                    </div>
+                </div>
+            </section>
+
+            <nav id="navBar">
+                <ul>
+                    <li class="item"><a href="home.html" target="_blank">Home </a></li>
+                    <li class="item"><a href="aboutus.html" target="_blank">About </a></li>
+                    <li class="item"><a href="course.html" target="_blank">Course</a></li>
+                    <li class="item"><a href="admission front page.html" target="_blank">Admission</a></li>
+                    <li class="item"><a href="campus.html" target="_blank">Campus</a></li>
+                    <li class="item"><a href="placement.html" target="_blank">Placement</a></li>
+                    <li class="item"><a href="alumni.html" target="_blank">Alumini</a></li>
+                    <li class="item"><a href="stuportal.html" target="_blank">Studentportal</a></li>
+                    <li class="item"><a href="feedback.html" target="_blank">Feedback</a></li>
+                </ul>
+            </nav>
+            <marquee direction="forwards">
+                <a href="admission front page.html" class="marquee" style="font-size: 25px;font-weight: bold;">Admission
+                    open</a>
+            </marquee>
+
+            <hr><br>
+            <h3 id="T1">Nexus's alumni — entrepreneurs,
+                researchers, policymakers, and above all, leaders — have helped to shape the world we know today.
+                From 3-D printing to bionic prostheses, many of the products and services that
+                define the modern world have sprung from the minds and hands of Nexus brilliant alumni community.</h3>
+            <div id="colorbox">Nexus nearly 10,000 alumni represent one of the most talented, innovative, and networked
+                communities
+                in India. Many volunteer, serve on boards, head up regional alumni clubs, and generously support
+                Nexus's students, faculty, and staff.
+                As individuals, their contributions are extraordinary. As a community, their impact is infinite.</div>
+            <img src="img/animated.gif" alt="ALUMNI"></img>
+            <h2 id="stories">Stories</h2>
+            <p font="30px">
+            <div id="colorboxx">
+
+                <img src="img/john.jpeg" id="imgage" alt="Jane Smith">
+
+                <h4>1. Meet John Doe: </h4>🎓🌟 After graduating from our university with a degree in business, John Doe
+                went on to become a successful entrepreneur. He founded a tech startup that revolutionized the
+                e-commerce industry and was recognized as one of Forbes' "30 Under 30." John remains an active
+                supporter of our university, mentoring aspiring entrepreneurs and funding scholarships for
+                future business leaders.</p>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+        <div id="colorboxx">
+            <img src="img/jane.jpeg" id="imgage" alt="Jane Smith">
+            <p font="30px">
+            <h4>2. Introducing Jane Smith:</h4> 🎓🌟 Jane Smith, a proud alumna of our university's engineering program,
+            has made remarkable contributions to the field of renewable energy. Her groundbreaking research
+            on solar panel efficiency earned her international recognition and a prestigious award from the
+            United Nations. Jane's passion for sustainability continues as she leads initiatives to promote
+            clean energy solutions worldwide.
+
+            These stories showcase the incredible achievements of our alumni and demonstrate the impact our university
+            has on shaping successful careers. Let's celebrate the accomplishments of our graduates and inspire
+            future generations!
+            </p>
+        </div>
+    </div>
+
+    <div id="facts">
+        <div id="new">
+            <h1 style="margin-left: 70px;">Facts & Figures</h1>
+            <div class="sub" style="margin-left: 70px;">98000+ <br><span>living alumini</span>
+                <br>
+                <div class="sub" style="margin-left: 70px;">26000+ <br><span>Annual attendence at Reunions</span>
+                    <br>
+                    <div class="sub" style="margin-left: 70px;">150+ <br><span>Regional alumni associations worldwide</span>
+                        <br>
+                        <div class="sub" style="margin-left: 70px;">20 <br><span>Alumni winners of the Nobel Prize</span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <h1 id="profile" style="margin-left: 70px;">Alumni Profiles</h1>
+    <div id="picse"><img src="img/leader.jpeg" class="profiles">
+        <h2>The Service Leader</h2>
+        <div id="colorboxx"> From Haryana to Nexus to Chicago, Harsh Ahlawat, Class of 2021, helps others break through
+            barriers.</div>
+    </div>
+    <div id="picse"><img src="img/mentor.jpeg" class="profiles">
+        <h2>The Mentor</h2>
+        <div id="colorboxx">Trivesh, Class of 2016, heads nonprofit to help poor students living near the border.</div>
+    </div>
+    <div id="picse"><img src="img/organiser.jpeg" class="profiles">
+        <h2>The Organiser</h2>
+        <div id="colorboxx">Abhay Chauhan, Class of 2017, is leading poetry workshops in Kenya.</div>
+    </div>
+    <br>
+    <div id="picse"><img src="img/senator.jpeg" class="profiles">
+        <h2>The Senator</h2>
+        <div id="colorboxx">Bill Bradley, Class of 1965, excelled on the basketball court and in politics and
+            government.</div>
+    </div>
+    <div id="picse"><img src="img/athlete.jpeg" class="profiles">
+        <h2>The Athlete and Inventor</h2>
+        <div id="colorboxx">Aditya, Class of 2003, competes as hard in business as he did playing shooting.</div>
+    </div>
+    <div id="picse"><img src="img/aero.jpeg" class="profiles">
+        <h2>The Aerospace Engineer</h2>
+        <div id="colorboxx">For Nishtha, Class of 2019, attending Nexus was a “rocket booster” toward a career in space
+            programs.</div>
+    </div>
+    <br><br><br>
+    <hr><br>
+    <!-- <marquee>Nexas University</marquee> -->
+    </div>
+    </div>
+    <footer style="background-color: rgb(228, 221, 221);height: 500px;">
+        <section id="foot" style=" margin: 110px 30px 68px 150px;">
+            <div id="foot1" style="width:200px; font-size: 23px; padding-top: 95px;">
+                <p><strong>QUICK LINKS</strong></p><br>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p><br>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p><br>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p><br>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p><br>
+                <p>
+                    <a href="courses front page.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: -380px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:20px;">
+                <p><strong>GET IN TOUCH</strong></p><br>
+                <p>NEXUS campus</p><br>
+                <p>Sector-79,Madrid Hills</p><br>
+                <p>Old GT Road,Mumbai-121374,India</p><br>
+                <p><strong>General Enquiry:</strong></p><br>
+                <p>NU:+91-7827363231</p><br>
+                <p>Fax:+91-149-4198233</p><br>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -360px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 20px;">
+                <p><strong>City offices</strong></p><br>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p><br>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

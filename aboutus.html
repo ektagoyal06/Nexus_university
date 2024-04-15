@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -51px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        #para {
+            margin: 23px 23px 23px 60px;
+            font-size: 25px;
+            width: 1000px;
+        }
+
+        video{
+            display: inline;
+            margin: -700px 12px 250px 1120px;
+            padding-bottom: -200px;
+            width: 350px;
+            vertical-align: baseline;
+            border-radius: 3px;
+            border: 3px solid black;
+        }
+        #adm-enq {
+            margin: -740px 12px 20px 1050px;
+            padding-bottom: -200px;
+            font-size: 20px;
+        }
+
+        .btn1 {
+            cursor: pointer;
+            align-content: center;
+            width: 270px;
+            height: 35px;
+            background-color: lightgrey;
+            font-size: 22px;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            color: white;
+            background-color: green;
+        }
+
+        #btn4 {
+            background-color: red;
+            color: white;
+            align-content: center;
+            justify-content: center;
+            margin: 20px 5px 5px 60px;
+            font-size: 23px;
+            font-weight: bold;
+            padding: 8px;
+            padding-right: 25px;
+            padding-left: 25px;
+            border-radius: 4px;
+        }
+
+        #btn4:hover {
+            background-color: green;
+        }
+        .para1{
+            margin: 23px 5px 5px 60px;
+            background-color: rgb(160, 252, 160);
+            font-weight: bold;
+            border-radius: 3px;
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            border: 2px solid red;
+            width:900px
+        }
+
+        a1:hover {
+            color: red;
+            cursor: pointer;
+        }
+        #search{
+            margin: 0px 15px 15px 400px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+        .marquee{
+            color: black;
+            text-decoration: none;
+        }
+
+        .marquee:hover{
+            color: red;
+        }
+        .links{
+            color: black;
+            text-decoration: none;
+        }
+        .links:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="head" style="width: 300px;">
+        <div id="header" style="width:200px">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="head1" style="width:1500px">
+        <div id="header1">
+            <div id="form">
+                <form>
+                    <label for="search"></label>
+                    <div class="Search1">
+                        <input type="text" name="mySearch" id="search" placeholder="Search" >
+                    </div>
+                </form>
+            </div>
+            <div class="apply">
+                <button class="btn">Apply now</button>
+                <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+            </div>
+        </div>
+    </section>
+
+    <nav id="navBar">
+        <ul>
+            <li class="item"><a href="home.html" target="_blank">Home </a></li>
+            <li class="item"><a href="aboutus.html" target="_blank">About </a></li>
+            <li class="item"><a href="courses front page.html" target="_blank">Course</a></li>
+            <li class="item"><a href="admission front page.html" target="_blank">Admission</a></li>
+            <li class="item"><a href="campus.html" target="_blank">Campus</a></li>
+            <li class="item"><a href="placement.html" target="_blank">Placement</a></li>
+            <li class="item"><a href="alumni.html" target="_blank">Alumini</a></li>
+            <li class="item"><a href="stuportal.html" target="_blank">Studentportal</a></li>
+            <li class="item"><a href="feedback.html" target="_blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <marquee direction="forwards">
+        <a href="admission front page.html" class="marquee" style="font-size: 25px;font-weight: bold;">Admission open</a>
+    </marquee>
+
+    <section id="about">
+        <div id="aboutus">
+            <h1 style="margin-left: 60px;margin-top: 35px;">ABOUT Nexus university</h1>
+            <p id="para" align="justify">Nexus university is one of the 23 university created to be Centres of Excellence for training, research and development in science, engineering and technology in India.
+
+                Established as College of Engineering in 1961, the Institute was later declared as an Institution of National Importance under the “Institutes of Technology (Amendment) Act, 1963” and was renamed as “Nexus university”. It was then accorded the status of a Deemed University with powers to decide its own academic policy, to conduct its own examinations, and to award its own degrees.
+                
+                Since its inception, over 48000 have graduated from Nexus university in various disciplines including Engineering, Physical Sciences, Management and Humanities & Social Sciences. Of these, nearly 5070 received Ph.D. degrees. The number of students who graduated with B.Tech. degree is over 15738. The rest obtained Master’s Degree in Engineering, Sciences and Business Administration. These alumni today work as scientists, technologists, business managers and entrepreneurs. There are several alumni who have moved away from their original disciplines and have taken to administrative services, active politics or are with NGOs. In doing so, they have contributed significantly to building of this nation, and to industrialization around the world.
+            </p>
+        </div>
+        <button id="btn4"> Newsletter</button>
+        <br><br>
+        <video width="1000px" height="220px" poster="img/lib.jpeg" controls="">
+            <source src="https://youtu.be/t5akgsQsOSk?si=h1TIDTQKH2EyjN_q" type="video/mp4">
+          </video>
+        <div id="mission" >
+            <h1 style="margin-left: 60px;">Mission and Vision of our University</h1><br>
+            <h3 style="margin-left: 60px;">Department Vision</h3>
+            <p class="para1">To be quality conscious, research-centric and change-oriented technological leader in the relevant areas.
+            </p><br>
+            <h3 style="margin-left: 60px;">Department Mission</h3>
+            <p class="para1"><strong>DM 1:&nbsp;</strong>To develop and impart knowledge and skills in the field of Computer Science and engineering.</p>
+            <p class="para1"><strong>DM 2:&nbsp;</strong>To encourage and support the generation and implementation of innovative ideas.</p>
+            <p class="para1"><strong>DM 3:&nbsp;</strong>To focus on new techniques,tools,and technology, in the ethical and responsible manner.</p>
+            <p class="para1"><strong>DM 4:&nbsp;</strong>To carry out colaborative interdisciplinary academicand research activities with a focus on Sustainable development</p>
+            <p class="para1"><strong>DM 5:&nbsp;</strong>T o create employment-ready human resourses</p>
+        </div>
+    </section>
+
+
+    <section id="adm-enq">
+        <h1 style="font-size: 35px;">Admission Enquiry</h1><br>
+        <div class="form">
+            <form action="backend.php">
+                <label for="name"></label>
+                <div>
+                    <input type="text" name="myName" id="name" placeholder="Enter name" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="Email"></label>
+                <div>
+                    <input type="text" name="myEmail" id="Email" placeholder="Enter Email Address" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="number"></label>
+                <div>
+                    <input type="number" name="myNumber" id="num" placeholder="Enter mobile number" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="state"></label>
+                <div>
+                    <input type="text" name="myState" id="state" placeholder="Enter State" style="width: 250px; height: 20px;">
+                </div><br>
+                <label for="city"></label>
+                <div>
+                    <input type="text" name="mycity" id="num" placeholder="Enter city" style="width: 250px; height: 20px;">
+                </div><br>
+                <div>
+                    <input type="checkbox" name="myAgreement">&nbsp;I agree to receive information from Nexus Team
+                </div><br>
+                <button class="btn1" style="font-weight: bold;">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer style="background-color: rgb(228, 221, 221);height: 500px;">
+        <section id="foot" style=" margin: 450px 30px 68px 150px;">
+            <div id="foot1" style="width:200px; font-size: 23px; padding-top: 95px;">
+                <p><strong>QUICK LINKS</strong></p><br>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p><br>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p><br>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p><br>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p><br>
+                <p>
+                    <a href="courses front page.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: -380px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:20px;">
+                <p><strong>GET IN TOUCH</strong></p><br>
+                <p>NEXUS campus</p><br>
+                <p>Sector-79,Madrid Hills</p><br>
+                <p>Old GT Road,Mumbai-121374,India</p><br>
+                <p><strong>General Enquiry:</strong></p><br>
+                <p>NU:+91-7827363231</p><br>
+                <p>Fax:+91-149-4198233</p><br>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -360px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 20px;">
+                <p><strong>City offices</strong></p><br>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p><br>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

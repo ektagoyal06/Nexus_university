@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Procedure</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -51px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        h1 {
+            margin: 35px 5px 8px 0px;
+        }
+
+        p {
+            margin: 8px 5px 8px 54px;
+            font-size: 20px;
+            width: 1000px;
+            padding: 10px;
+        }
+
+        .step {
+            margin: 35px 5px 8px 54px;
+            background: rgb(3, 105, 34);
+            color: white;
+            border-radius: 30px;
+            width: 1000px
+        }
+
+        #adm-enq {
+            margin: -1365px 12px 20px 1150px;
+            padding-bottom: -200px;
+            font-size: 20px;
+            width: 500px;
+        }
+
+
+        .btn1 {
+            cursor: pointer;
+            align-content: center;
+            width: 270px;
+            height: 30px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            color: white;
+            background-color: green;
+        }
+
+        a1:hover {
+            color: red;
+            cursor: pointer;
+        }
+        #search{
+            margin: 19px 15px 15px -720px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+        .marquee{
+            color: black;
+            text-decoration: none;
+        }
+
+        .marquee:hover{
+            color: red;
+            
+        }
+        .links{
+            color: black;
+            text-decoration: none;
+        }
+        .links:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="head" style="width: 300px;">
+        <div id="header" style="width:200px">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="head1" style="width:1500px">
+        <div id="header1">
+            <div class="apply">
+                <div id="form" style="height: 20px;">
+                    <form>
+                        <label for="search"></label>
+                        <div class="Search1">
+                            <input type="text" name="mySearch" id="search" placeholder="Search" >
+                        </div>
+                    </form>
+                </div>
+                <button class="btn">Apply now</button>
+                <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+            </div>
+        </div>
+    </section>
+
+    <nav id="navBar">
+        <ul>
+            <li class="item"><a href="home.html" target="_blank">Home </a></li>
+            <li class="item"><a href="aboutus.html" target="_blank">About </a></li>
+            <li class="item"><a href="courses front page.html" target="_blank">Course</a></li>
+            <li class="item"><a href="admission front page.html" target="_blank">Admission</a></li>
+            <li class="item"><a href="campus.html" target="_blank">Campus</a></li>
+            <li class="item"><a href="placement.html" target="_blank">Placement</a></li>
+            <li class="item"><a href="alumni.html" target="_blank">Alumini</a></li>
+            <li class="item"><a href="stuportal.html" target="_blank">Studentportal</a></li>
+            <li class="item"><a href="feedback.html" target="_blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <marquee direction="forwards">
+        <a href="admission front page.html"  style="font-size: 25px;font-weight: bold;" class="marquee">Admission open</a>
+    </marquee>
+    <h1 style="margin-left: 60px;width: 1000px;">Important Instructions For Admission Seekers</h1>
+    <p class="step"><strong>STEP -1 SUBMISSION OF APPLICATION- ONLINE APPLICATION FORM FILLING</strong></p>
+    <p>Application for admission shall be submitted online only at Manav Rachna online Admission Portal. The candidate
+        may fill the application form without waiting for the results of qualifying examination (XII/Graduation/Diploma
+        as the case may be) before due date. The prospective student is advised to carefully fill all the details and
+        prioritize the choice of programs he/she wishes to apply. Total 3 (three) choices are allowed. Application fee
+        of Rs. 1200/- is payable. Payment can be made through Net Banking/ Credit/Debit card/E-wallets at the time of
+        submission of application. Alternatively, candidate may procure the Admission Brochure from Manav Rachna Campus,
+        Administrative Headquarters or City Centers, details of which are available on Manav Rachna website. Admission
+        Brochure contains a Scratch Card (voucher code) consisting of a covered number, which will facilitate submission
+        of application form online. You can download admission brochure without Scratch Card (voucher code) online for
+        free. Once online application for admission is submitted successfully, the system will generate a unique
+        application number which must be noted by the candidates as the same shall act as a Reference Number for all
+        subsequent correspondence till the candidate is actually admitted.</p>
+    <p class="step">STEP -II UPLOADING OF DOCUMENTS </p>
+    <p>Every candidate shall be required to upload the following documents along with the application: <br>
+        Class 10th mark sheet: Mandatory for all Programmes <br>
+        Address Proof: Mandatory for all Programmes</p>
+    <p class="step">STEP-III SELECTION OF CANDIDATE AND OFFER OF ADMISSION LETTER</p>
+    <p>Merit Defining Document: Admission to various programs is based on merit as specified in Admission Brochure.
+        Admissions to all programs are also made on the basis of Manav Rachna National Aptitude Test (MRNAT) for which
+        the scores shall automatically be picked up for merit. <br>
+
+        All Candidates shall be allowed to prioritize choices amongst the programs at the application stage itself. A
+        candidate, who initially does not get the choice program in the first list, shall be offered admission in
+        subsequent choices filled. University shall announce vacancy, if any, at a later date and desirous candidate
+        shall have an option of appearing in the ‘on the spot counseling’ and may get upgraded as per the merit of the
+        participating candidates.
+        <br>
+        Seats in the programs shall be allotted on the basis of preferences indicated in the application form, strictly
+        in order of merit.
+        The program wise selection of candidates amongst applications received shall be drawn based on the actual marks
+        scored by the candidate in Merit Defining Exam Score.
+    </p>
+    <p class="step">STEP-IV- ACCEPTANCE OF ADMISSION AND PAYMENT OF FEE</p>
+    <p>All the selected candidates, who receive Admission Offer Letter from the University shall be required to send the
+        Acceptance of Admission for the offered programme in the format which shall be sent by the University Authority
+        along with the Admission Offer Letter.</p>
+    <p class="step">STEP-V PHYSICAL VERIFICATION OF DOCUMENTS AND ENROLLMENT PROCESS: </p>
+    <p>All the candidates, who have accepted the admission after receipt of Admission Offer Letter, shall be required to
+        report at designated venue’s for “Physical Document Verification / Enrollment Process” as per the slots given to
+        them. Candidates are required to bring Letter of ‘Offer of Admission’ and all the original fee receipts. <br>
+        Candidates shall also carry all relevant documents in original along with a set of self-attested photocopies.
+        Candidates shall upload all the required documents on Admission Portal prior to the verification process. <br>
+        Candidates can appear in the “Physical Document Verification / Enrollment Process” after deposition of 1st
+        installment of academic fee, using any mode as mentioned below.</p>
+
+    <section id="adm-enq">
+        <h1>Admission Enquiry</h1><br>
+        <div class="form">
+            <form action="backend.php">
+                <label for="name"></label>
+                <div>
+                    <input type="text" name="myName" id="name" placeholder="Enter name" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="Email"></label>
+                <div>
+                    <input type="text" name="myEmail" id="Email" placeholder="Enter Email Address" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="number"></label>
+                <div>
+                    <input type="number" name="myNumber" id="num" placeholder="Enter mobile number" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="state"></label>
+                <div>
+                    <input type="text" name="myState" id="state" placeholder="Enter State" style="width: 250px; height: 20px;">
+                </div><br>
+                <label for="city"></label>
+                <div>
+                    <input type="text" name="mycity" id="num" placeholder="Enter city" style="width: 250px; height: 20px;">
+                </div><br>
+                <div>
+                    <input type="checkbox" name="myAgreement">&nbsp;I agree to receive information from Nexus Team
+                </div><br>
+                <button class="btn1">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer style="background-color: rgb(174, 170, 170);height: 520px;">
+        <section id="foot" style=" margin:1030px 30px 68px 150px;">
+            <div id="foot1" style="width:200px; font-size: 23px; padding-top: 44px;">
+                <p><strong>QUICK LINKS</strong></p>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p>
+                <p>
+                    <a href="courses front page.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: -357px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:20px;">
+                <p><strong>GET IN TOUCH</strong></p>
+                <p>NEXUS campus</p>
+                <p>Sector-79,Madrid Hills</p>
+                <p>Old GT Road,Mumbai-121374,India</p>
+                <p><strong>General Enquiry:</strong></p>
+                <p>NU:+91-7827363231</p>
+                <p>Fax:+91-149-4198233</p>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -454px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 20px;">
+                <p><strong>City offices</strong></p>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

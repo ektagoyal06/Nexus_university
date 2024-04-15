@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -51px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        .marquee {
+            color: black;
+        }
+
+        .marquee:hover {
+            color: red;
+        }
+
+        .section-img {
+            overflow: hidden;
+            height: 800px;
+            width: 1490px;
+            margin-left: 25px;
+        }
+
+        .slide-images {
+            width: 3600px;
+            height: 800px;
+            margin: 0px 0px 0px -2400px;
+            position: relative;
+            -webkit-animation: slide_animation 33s infinite alternate running;
+        }
+
+        @-webkit-keyframes slide_animation {
+            0% {
+                left: 0%;
+            }
+
+            10% {
+                left: 0px;
+            }
+
+            20% {
+                left: 1200px;
+            }
+
+            30% {
+                left: 1200px;
+            }
+
+            40% {
+                left: 2400px;
+            }
+
+            50% {
+                left: 2400px;
+            }
+
+            60% {
+                left: 1200px;
+            }
+
+            70% {
+                left: 1200px;
+            }
+
+            80% {
+                left: 1200px;
+            }
+
+            90% {
+                left: 0px;
+            }
+
+            100% {
+                left: 0px;
+            }
+        }
+
+        .sec {
+            height: 800px;
+            width: 1200px;
+            position: relative;
+            float: left;
+        }
+
+        #success {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -180px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+            color: white;
+        }
+
+        .success-item {
+            padding: 20px 60px;
+            font-size: 15px;
+        }
+
+        #programs {
+            padding: 50px;
+        }
+
+        #pro1 {
+            display: grid;
+            text-decoration: none;
+            color: black;
+            grid-template-columns: repeat(2, 500px);
+        }
+
+        .box {
+            padding: 23px;
+            text-align: center;
+            height: 50px;
+            width: 400px;
+            margin: 20px 5px;
+            border: 2px solid black;
+            font-size: 25px;
+            background-color: rgb(251, 246, 246);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .box:hover {
+            color: white;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #adm-enq {
+            margin: -375px 12px 20px 1090px;
+            padding-bottom: -200px;
+            font-size: 20px;
+        }
+
+        .btn1 {
+            cursor: pointer;
+            align-content: center;
+            width: 270px;
+            height: 35px;
+            background-color: lightgrey;
+            font-size: 22px;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            color: white;
+            background-color: green;
+        }
+
+        #infra {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 28px;
+            margin: -25px 15px 6px 15px;
+            text-align: center;
+            -webkit-animation: aa 10s ease-in-out 2s 12 forwards;
+        }
+
+        @-webkit-keyframes aa {
+            0% {
+                right: 0%;
+            }
+
+            10% {
+                right: 0px;
+            }
+
+            20% {
+                right: 1400px;
+            }
+
+            30% {
+                right: 1200px;
+            }
+
+            40% {
+                right: 2400px;
+            }
+
+            50% {
+                right: 2400px;
+            }
+
+            60% {
+                right: 1200px;
+            }
+
+            70% {
+                right: 1200px;
+            }
+
+            80% {
+                right: 0px;
+            }
+
+            90% {
+                right: 0px;
+            }
+
+            100% {
+                right: 0px;
+            }
+        }
+
+        .infra1 {
+            padding: 20px;
+
+        }
+
+        .fig {
+            background-color: rgb(125, 122, 122);
+            opacity: 1;
+            height: 23px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #partners {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 45px 56px 6px 18px;
+            margin: -25px 15px 6px 15px;
+            text-align: center;
+        }
+
+        .part {
+            padding: 20px;
+            height: 23px;
+        }
+
+        #partners2 {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 95px 56px 6px 32px;
+            margin: -25px 15px 6px 15px;
+            text-align: center;
+
+        }
+
+        .part1 {
+            padding: 20px;
+            height: 23px;
+        }
+
+        .links:hover {
+            color: red;
+        }
+
+        #search {
+            margin: 0px 15px 15px 400px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="head" style="width: 300px;">
+        <div id="header" style="width:200px">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="head1" style="width:1500px">
+        <div id="header1">
+            <div id="form">
+                <form>
+                    <label for="search"></label>
+                    <div class="Search1">
+                        <input type="text" name="mySearch" id="search" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="apply">
+                <button class="btn">Apply now</button>
+                <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+            </div>
+        </div>
+    </section>
+
+    <nav id="navBar">
+        <ul>
+            <li class="item"><a href="home.html" target="_blank">Home </a></li>
+            <li class="item"><a href="aboutus.html" target="_blank">About </a></li>
+            <li class="item"><a href="courses front page.html" target="_blank">Course</a></li>
+            <li class="item"><a href="admission front page.html" target="_blank">Admission</a></li>
+            <li class="item"><a href="campus.html" target="_blank">Campus</a></li>
+            <li class="item"><a href="placement.html" target="_blank">Placement</a></li>
+            <li class="item"><a href="alumni.html" target="_blank">Alumini</a></li>
+            <li class="item"><a href="stuportal.html" target="_blank">Studentportal</a></li>
+            <li class="item"><a href="feedback.html" target="_blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <marquee direction="forwards">
+        <a href="admission front page.html" class="marquee" style="font-size: 25px;font-weight: bold;">Admission
+            open</a>
+    </marquee>
+
+    <section class="section-img">
+        <div class="slide-images">
+            <div class="sec">
+                <img src="img/uni.jpg" height="550px" width="1500px">
+            </div>
+            <div class="sec">
+                <img src="img/uni2.webp" height="550px" width="1500px">
+            </div>
+            <div class="sec">
+                <img src="img/uni3.jpeg" height="550px" width="1500px">
+            </div>
+        </div>
+    </section>
+
+    <section id="success-section">
+        <div id="success">
+            <div class="success-item">
+                <h1>37000+</h1><br>
+                <p>Alumni imprints</p><br>Globally
+            </div>
+            <div class="success-item">
+                <h1>6000+</h1><br>
+                <p>Reputed MNCs &</p><br>
+                <p>Indian Corporate</p><br>
+                <p>patronising NU</p>
+            </div>
+            <div class="success-item">
+                <h1>87+</h1><br>
+                <p>Global</p><br>
+                <p>Academic</p><br>
+                <p>Colaborations</p>
+            </div>
+            <div class="success-item">
+                <h1>545+</h1><br>
+                <p>Patents</p><br>
+                <p>(filled/granted)</p>
+            </div>
+            <div class="success-item">
+                <h1>90+</h1><br>
+                <p>Alumni &</p><br>
+                <p>In campus</p><br>
+                <p>start-ups</p>
+            </div>
+            <div class="success-item">
+                <h1>8500+</h1><br>
+                <p>Research papers in </p><br>
+                <p>Internationals/</p><br>
+                <p>National journals</p><br>
+                <p>and conferences</p>
+            </div>
+        </div>
+    </section>
+    <div id="programs">
+        <h1 class="heading" style="margin: 2px; font-size: 45px;">PROGRAMS</h1>
+        <div id="pro1" style="width:1000px">
+            <div class="box">
+                <a href="ET.html">School of Engineering & technology</a>
+            </div>
+            <div class="box">
+                <a href="commerce.html">School of commerce</a>
+            </div>
+            <div class="box">
+                <a href="Soc-pol.html">School of Humanities</a>
+            </div>
+            <div class="box">
+                <a href="FL.html">School of Foreign language</a>
+            </div>
+        </div>
+    </div>
+    <section id="adm-enq">
+        <h1 style="font-size: 35px;">Admission Enquiry</h1><br>
+        <div class="form">
+            <form action="backend.php">
+                <label for="name"></label>
+                <div>
+                    <input type="text" name="myName" id="name" placeholder="Enter name" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="Email"></label>
+                <div>
+                    <input type="text" name="myEmail" id="Email" placeholder="Enter Email Address" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="number"></label>
+                <div>
+                    <input type="number" name="myNumber" id="num" placeholder="Enter mobile number" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="state"></label>
+                <div>
+                    <input type="text" name="myState" id="state" placeholder="Enter State" style="width: 250px; height: 20px;">
+                </div><br>
+                <label for="city"></label>
+                <div>
+                    <input type="text" name="mycity" id="num" placeholder="Enter city" style="width: 250px; height: 20px;">
+                </div><br>
+                <div>
+                    <input type="checkbox" name="myAgreement">&nbsp;I agree to receive information from Nexus Team
+                </div><br>
+                <button class="btn1" style="font-weight: bold;">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section id="infrastructure">
+        <h1 class="heading1" style="padding-top: -100px; margin-left: 54px; font-size: 40px;">INFRASTRUCTURE</h1><br>
+        <div id="infra">
+            <div class="infra1">
+                <img src="img/class.jpeg" height="170px" width="250px">
+                <figcaption class="fig"><strong>Classes</strong></figcaption>
+            </div>
+            <div class="infra1">
+                <img src="img/lib.jpeg">
+                <figcaption class="fig"><strong>Library</strong></figcaption>
+            </div>
+            <div class="infra1">
+                <img src="img/hostel.jpeg">
+                <figcaption class="fig"><strong>Hostel</strong></figcaption>
+            </div>
+            <div class="infra1">
+                <img src="img/canteen.jpeg">
+                <figcaption class="fig"><strong>Canteen</strong></figcaption>
+            </div>
+        </div>
+    </section>
+    <section id="kpartners">
+        <h1 style="font-size: 35px; padding-top: 35px; margin-left: 54px;">KNOWLEDGE PARTNERS</h1>
+        <div id="partners">
+            <div class="part">
+                <img src="img/google.png">
+            </div>
+            <div class="part">
+                <img src="img/microsoft.png">
+            </div>
+            <div class="part">
+                <img src="img/infosys.png">
+            </div>
+            <div class="part">
+                <img src="img/reliance.png">
+            </div>
+            <div class="part">
+                <img src="img/qh.png">
+            </div>
+        </div>
+    </section>
+    <section id="partners1">
+        <div id="partners2">
+            <div class="part1">
+                <img src="img/xebia.png">
+            </div>
+            <div class="part1">
+                <img src="img/tcs.png">
+            </div>
+            <div class="part1">
+                <img src="img/ibm.png">
+            </div>
+            <div class="part1">
+                <img src="img/accenture.png">
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: rgb(228, 221, 221);height: 500px;">
+        <section id="foot" style=" margin: 200px 30px 68px 150px;">
+            <div id="foot1" style="width:200px; font-size: 23px; padding-top: 95px;">
+                <p><strong>QUICK LINKS</strong></p><br>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p><br>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p><br>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p><br>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p><br>
+                <p>
+                    <a href="courses front page.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: -380px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:20px;">
+                <p><strong>GET IN TOUCH</strong></p><br>
+                <p>NEXUS campus</p><br>
+                <p>Sector-79,Madrid Hills</p><br>
+                <p>Old GT Road,Mumbai-121374,India</p><br>
+                <p><strong>General Enquiry:</strong></p><br>
+                <p>NU:+91-7827363231</p><br>
+                <p>Fax:+91-149-4198233</p><br>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -360px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 20px;">
+                <p><strong>City offices</strong></p><br>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p><br>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission login</title>
+    <style>
+        body {
+            background-color: rgb(212, 249, 212);
+        }
+        /* #form{
+            border: 2px solid black;
+            margin: 50px 5px 5px 70px;
+        } */
+
+        .heading1 {
+            margin: 30px 5px 5px 60px;
+            font-size: 80px;
+        }
+
+        .heading {
+            margin: 30px 5px 5px 60px;
+            font-size: 40px;
+        }
+
+        .box{
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 590px;
+        }
+
+        input {
+            background-color: rgb(249, 249, 232);
+        }
+
+        #adm-enq {
+            margin: 0px 12px 20px 40px;
+            padding-bottom: 30px;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+
+        .btn1 {
+            cursor: pointer;
+            align-content: center;
+            width: 270px;
+            height: 35px;
+            background-color: lightgrey;
+            font-size: 22px;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            color: white;
+            background-color: green;
+        }
+
+        #name {
+            width: 200px;
+        }
+
+        #Email {
+            width: 200px;
+        }
+
+        #password {
+            width: 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="form">
+        <h1 align="center" class="heading1">Nexus University</h1>
+        
+        <section id="adm-enq">
+            <h2 align="center" class="heading">Student Enrollment Form:</h2><br>
+            <div class="box">
+                <form action="backend.php">
+                    <label for="Name"><strong>First name:</strong></label>&nbsp;
+                    <input type="text" name="myName" id="name" placeholder="Enter name"><br>
+                    <br>
+                    <label for="Name"><strong>Last name:</strong></label>&nbsp;
+                    <input type="text" name="myName" id="name" placeholder="Enter name"><br>
+                    <br>
+                    <label for="Email"><strong>Email:</strong></label>&nbsp;
+                    <input type="text" name="myEmail" id="Email" placeholder="Enter Email Address"><br>
+                    <br>
+                    <label for="password"><strong>Password:</strong></label>&nbsp;
+                    <input type="number" name="myPassword" id="password" placeholder="Enter password"><br>
+                    <br>
+                    <label for="number"><strong>Phone number:</strong></label>&nbsp;
+                    <input type="number" name="myNumber" id="num" placeholder="Enter mobile number"><br>
+                    <br>
+                    <label for="Country"><strong>Country:</strong></label>&nbsp;
+                    <input type="text" name="mycountry" id="country" placeholder="Enter Country"><br>
+                    <br>
+                    <label for="state"><strong>State:</strong></label>&nbsp;
+                    <input type="text" name="myState" id="state" placeholder="Enter State"><br>
+                    <br>
+                    <label for="city"><strong>City:</strong></label>&nbsp;
+                    <input type="text" name="mycity" id="num" placeholder="Enter city"><br>
+                    <br>
+                    <strong>Gender:</strong>&nbsp;Male<input type="radio" name="myGender"> FeMale<input type="radio"
+                        name="myGender"><br><br>
+                    <strong>Address:</strong><br><textarea name="myText" cols="40" rows="6"></textarea>
+                    <div>
+                        <input type="checkbox" name="myAgreement">&nbsp;I agree to receive information from Nexus Team
+                    </div>
+                    
+                    <br>
+                    <button class="btn1" style="font-weight: bold;">Submit</button>
+                </form>
+            </div>
+        </section>
+        <script>
+            function submit() {
+                let btn1 = document.getElementById(btn1);
+            }
+        </script>
+    </section>
+</body>
+
+</html>

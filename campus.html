@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Campus</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #header {
+            margin: 30px 19px;
+        }
+
+        .logo {
+            height: 70px;
+            margin: -10px 1px;
+            display: block;
+        }
+
+        .logo img {
+            border-radius: 5px;
+            height: 120px;
+            margin: 3px 6px;
+        }
+
+        #header1 {
+            margin: -61px 30px 30px -110px;
+            padding: -0.5px 20px 20px 1100px;
+            height: 100px;
+        }
+
+        .apply {
+            height: 50px;
+            margin: -51px 12px 20px 1100px;
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            align-content: center;
+            width: 135px;
+            height: 38px;
+            background-color: lightgrey;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: -100px 30px 20px -100px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 220px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: -100px 30px 20px 8px;
+        }
+
+        .btn2:hover {
+            background-color: green;
+        }
+
+        .darkbtn {
+            cursor: pointer;
+            align-content: center;
+            justify-content: center;
+            width: 110px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .darkbtn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            padding: -25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #navBar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 22px 56px 6px 78px;
+            margin: -30px 15px 6px 15px;
+            text-align: center;
+            background-color: rgb(2, 113, 2);
+        }
+
+        #navBar ul {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navBar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #navBar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navBar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #navBar ul li a:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        .heading{
+            margin: 45px 5px 5px 70px;
+            width: 700px;
+        }
+
+        .para{
+            margin: 30px 5px 5px 70px;
+            border: 2px solid black;
+            padding: 10px 10px 10px 10px;
+            width: 900px;
+            border-radius: 10px;
+            background-color:rgb(168, 247, 168);
+            font-size: 23px;
+        }
+        #adm-enq {
+            margin: -2280px 12px 20px 1090px;
+            padding-bottom: -200px;
+            font-size: 20px;
+        }
+
+        .btn1 {
+            cursor: pointer;
+            align-content: center;
+            width: 270px;
+            height: 35px;
+            background-color: lightgrey;
+            font-size: 22px;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            color: white;
+            background-color: green;
+        }
+
+        #search {
+            margin: 0px 15px 15px 400px;
+            width: 480px;
+            height: 35px;
+            border: 2px solid black;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: black;
+        }
+        .marquee{
+            color: black;
+            text-decoration: none;
+        }
+
+        .marquee:hover{
+            color: red;
+            
+        }
+        .links{
+            color: black;
+            text-decoration: none;
+        }
+        .links:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="head" style="width: 300px;">
+        <div id="header" style="width:200px">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="head1" style="width:1500px">
+        <div id="header1">
+            <div id="form">
+                <form>
+                    <label for="search"></label>
+                    <div class="Search1">
+                        <input type="text" name="mySearch" id="search" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="apply">
+                <button class="btn">Apply now</button>
+                <button class="btn2" style="display: inline;">Admission_Brochure</button>
+                <button onclick="myFunction()" class="darkbtn">Dark mode</button>
+            </div>
+        </div>
+    </section>
+
+    <nav id="navBar">
+        <ul>
+            <li class="item"><a href="home.html" target="_blank">Home </a></li>
+            <li class="item"><a href="aboutus.html" target="_blank">About </a></li>
+            <li class="item"><a href="courses front page.html" target="_blank">Course</a></li>
+            <li class="item"><a href="admission front page.html" target="_blank">Admission</a></li>
+            <li class="item"><a href="campus.html" target="_blank">Campus</a></li>
+            <li class="item"><a href="placement.html" target="_blank">Placement</a></li>
+            <li class="item"><a href="alumni.html" target="_blank">Alumini</a></li>
+            <li class="item"><a href="stuportal.html" target="_blank">Studentportal</a></li>
+            <li class="item"><a href="feedback.html" target="_blank">Feedback</a></li>
+        </ul>
+    </nav>
+    <marquee direction="forwards">
+        <a href="admission front page.html" style="font-size: 25px;font-weight: bold;" class="marquee">Admission open</a>
+    </marquee>
+    <section id="campus">
+        <div class="facilities">
+            <h2 class="heading">HEALTHCARE FACILITIES</h2>
+            <p class="para">A wide range of health and welfare services are available at NEXUS campus. It has a well-equipped
+                dispensary
+                for first aid and minor medical services, with a qualified Doctor and nursing staff to take care of the
+                medical emergencies. MREI also has two well equipped ambulances to cater to any exigencies thus ensuring
+                highest medical safety. Besides having the First-Aid room in the campus and a separate sick bay for boys
+                and
+                girls, there is a state-of-the-art, Dental and Physiotherapy OPD. Medical Consultant also is available
+                during the specified hours on all working days.
+                <br>
+                Nexus has tie-ups with renowned hospitals in Faridabad like Asian Hospital, Metro Hospital and Sarvodaya
+                Hospital. These hospitals provide OPD and other medical service to NEXUS staff and their
+                families/dependants, at discounted rates.
+        </div>
+        <div class="trans">
+            <h2 class="heading">TRANSPORT</h2>
+            <p class="para">Nexus Education Institutions have a fleet of luxury A/C buses to provide transport to the students for
+                Delhi-NCR covering various locations of Delhi, Noida and Gurgaon. It has also fleet of Non-AC Delux
+                buses
+                for the Faridabad, Ballabhgarh and Palwal students. Its buses are equipped with all safety devices like
+                Fire
+                Extinguisher, First-aid Kit etc. These are also equipped with GPS to track the bus location, route,
+                speed
+                etc. and speed governor to restrict the speed of the buses (as per the guidelines of the Supreme Court).
+                Buses of board and de-board the students inside the campus premises only at the scheduled time at
+                arrival
+                and departure.
+                As a facility to campus students, Nexus provides free Shuttle Service to & from ManavRachnaBadkhal Metro
+                Station in the morning and afternoon.
+                During end semester exam days, apart from regular routes, Nexus provides shuttle service for Tughlakabad
+                Metro Station, Delhi, Mathura Road (Badkhal Chowk) Faridabad &PaliChowk from the campus.
+                Seat numbers are allotted to all transport users on the basis of first come first serve. Transport Fee
+                is
+                collected one time in advance for the whole academic session at the time of availing transport facility.
+                Transport ID Cards are given to the users for academic session every year. Nexus provides free transport
+                facility for the off campus hostlers. The complete transport information such as routs, fee structure,
+                transport refund policy, guidelines etc. is also available at the website of Nexus.</p>
+        </div>
+        <div class="canteen">
+            <h2 class="heading">CANTEEN & CAFETERIAS</h2>
+            <p class="para">Nexus Campus has well stocked canteen and cafeteria such as Hotshot, Hunger Cure, Subway etc., Besides, a
+                Food Court consisting of Eight brands including Café Woody’s, 34 Chowringhee Lane, a Juice Lounge, a
+                Dosa
+                Plaza, Momo box, Sugar Shacks (Waffles) and an Indian Kitchen; Chaigaram, and Needs provide daily
+                necessities to students in hygienic environment & good ambience. Recently WH Smith a renowned world
+                famous
+                departmental store, have also commissioned their outlet at Nexus Campus. These outlets can cater to all
+                daily needs of students at campus and the hostellers alike.</p>
+        </div>
+        <div class="hostel">
+            <h2 class="heading">HOSTELS</h2>
+            <p class="para">NEXUS provides both on-campus and off-campus hostel accommodation for boys and girls with single, double
+                and
+                triple rooms. The hostel rooms are well furnished with essential modern facilities like TV, PCs, Wi-fi,
+                Telephone, RO Drinking water, newspapers as well as games like Table Tennis etc. It has a well managed
+                and
+                hygienic mess, where nutritional needs and taste of students are taken care of. An ergonomically and
+                aesthetically designed hostel basically meant for International students, is available with all
+                state-of-the-art facilities. There are many categories of rooms in hostels-Air Conditioned, Non Air
+                Conditioned, single seater, two seater, three seater and five seater rooms with attached/common
+                bathrooms.
+                Hostel fee is charged according to the room category chosen by the student, through DD or by cash.
+                Medical
+                facilities, medical insurance, library facilities and laundry facilities are also provided within the
+                hostel
+                fee charges.</p>
+        </div>
+        <div class="bank">
+            <h2 class="heading">BANK LOAN ASSISTANCE</h2>
+            <p class="para">NEXUS aims to support deserving/meritorious students in availing financial assistance for pursuing their
+                higher education. In order to encourage students to take up higher education despite their financial
+                shortcomings, nowadays, most banks are providing attractive loan facility to students. Details of such
+                loans
+                and procedure/documentation needed by various banks are given on respective bank websites. However to
+                assist
+                the students in obtaining the bank loans a separate cell has been set-up at Nexus. 
+            </p>
+        </div>
+        <div class="women">
+            <h2 class="heading">WOMEN SAFETY</h2>
+            <p class="para"><b>LEADS THE WAY</b> – NEXUS always stresses on the safety of its students and employees with a special
+                emphasis on the safety of female students and staff. MR has always been working on the CSR activities by
+                providing support to “Beti Bachao Beti Padhao Campaign” and “Gender Sensitization” among others. As a
+                latest
+                initiative, a workshop was conducted by MR Academic Staff College with the help of YEPZON India Ltd. A
+                training by KRAV-MAGA team on Self-defense for women was organized, which was attended by over 350
+                female
+                students and faculty.</p>
+        </div>
+    </section>
+    <section id="adm-enq">
+        <h1 style="font-size: 35px;">Admission Enquiry</h1><br>
+        <div class="form">
+            <form action="backend.php">
+                <label for="name"></label>
+                <div>
+                    <input type="text" name="myName" id="name" placeholder="Enter name" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="Email"></label>
+                <div>
+                    <input type="text" name="myEmail" id="Email" placeholder="Enter Email Address" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="number"></label>
+                <div>
+                    <input type="number" name="myNumber" id="num" placeholder="Enter mobile number" style="width: 250px; height: 20px;">
+                </div>
+                <br>
+                <label for="state"></label>
+                <div>
+                    <input type="text" name="myState" id="state" placeholder="Enter State" style="width: 250px; height: 20px;">
+                </div><br>
+                <label for="city"></label>
+                <div>
+                    <input type="text" name="mycity" id="num" placeholder="Enter city" style="width: 250px; height: 20px;">
+                </div><br>
+                <div>
+                    <input type="checkbox" name="myAgreement">&nbsp;I agree to receive information from Nexus Team
+                </div><br>
+                <button class="btn1" style="font-weight: bold;">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer style="background-color: rgb(228, 221, 221);height: 500px;">
+        <section id="foot" style=" margin: 2100px 30px 68px 150px;">
+            <div id="foot1" style="width:200px; font-size: 23px; padding-top: 95px;">
+                <p><strong>QUICK LINKS</strong></p><br>
+                <p>
+                    <a href="placement.html" class="links">Placement cell</a>
+                </p><br>
+                <p>
+                    <a href="admission front page.html" class="links">Admission Notice</a>
+                </p><br>
+                <p>
+                    <a href="alumni.html" class="links">Alumni Connect</a>
+                </p><br>
+                <p>
+                    <a href="adm faqs.html" class="links">Frequently asked question</a>
+                </p><br>
+                <p>
+                    <a href="courses front page.html" class="links">Courses offered</a>
+                </p>
+            </div>
+        </section>
+        <section id="ft" style="margin: -380px 12px -157px 583px; padding-bottom: -200px;">
+            <div id="foot2" style="width:400px;font-size:20px;">
+                <p><strong>GET IN TOUCH</strong></p><br>
+                <p>NEXUS campus</p><br>
+                <p>Sector-79,Madrid Hills</p><br>
+                <p>Old GT Road,Mumbai-121374,India</p><br>
+                <p><strong>General Enquiry:</strong></p><br>
+                <p>NU:+91-7827363231</p><br>
+                <p>Fax:+91-149-4198233</p><br>
+                <p>E-mail:</p>
+                <p style="color: red;cursor: pointer;">admissions@nexus.in</p>
+            </div>
+        </section>
+        <section id="ft1" style="margin: -360px 30px 16px 1050px; padding-bottom: -200px;">
+            <div id="foot3" style="width:400px;font-size: 20px;">
+                <p><strong>City offices</strong></p><br>
+                <p>Mumbai&nbsp;|&nbsp;Punjab&nbsp;|&nbsp;Banglore</p><br>
+                <p>West Bengal&nbsp;|&nbsp;Delhi&nbsp;|&nbsp;Himachal pradesh</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>
